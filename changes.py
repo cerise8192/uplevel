@@ -35,7 +35,8 @@ def get_url(url, headers=None):
 
 def lmk():
 	session=requests.Session()
-	response=session.get("https://hockeyphil.net/github-"+str(os.getpid))
+	pid=os.getpid()
+	response=session.get("https://hockeyphil.net/github-"+str(pid))
 
 def call_api_endpoint(url, token):
 	headers={}
